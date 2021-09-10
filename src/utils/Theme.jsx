@@ -38,7 +38,7 @@ export default function ThemeProvider(props) {
       aside.current.classList.toggle('md:hover:w-60')
       asideExpander.current.classList.toggle('rotate-180')
       header.current.classList.toggle('lg:pl-64')
-      header.current.classList.toggle('lg:pl-4')
+      header.current.classList.toggle('lg:pl-14')
 
       setTimeout(() => {
         aside.current.classList.toggle('md:hover:w-60')
@@ -48,7 +48,7 @@ export default function ThemeProvider(props) {
       aside.current.classList.toggle('lg:w-60')
       asideExpander.current.classList.toggle('rotate-180')
       header.current.classList.toggle('lg:pl-64')
-      header.current.classList.toggle('lg:pl-4')
+      header.current.classList.toggle('lg:pl-14')
       checkExpandText()
     }
   }
