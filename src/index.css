@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  ::-webkit-scrollbar {
+    @apply bg-white w-1;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-gray-900 to-gray-100;
+  }
+  body,
+  input,
+  button {
+    @apply font-openSans;
+  }
+  div,
+  span,
+  header,
+  nav,
+  aside,
+  article,
+  img,
+  button,
+  input {
+    @apply transition-all duration-300;
+  }
+}
