@@ -7,12 +7,16 @@
     @apply bg-white w-1;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-gradient-to-b from-gray-900 to-gray-100;
+    @apply rounded-full bg-gradient-to-b from-gray-900 to-blue-100;
   }
   body,
   input,
   button {
     @apply font-openSans;
+  }
+  button,
+  input {
+    @apply outline-none;
   }
   div,
   span,
@@ -22,7 +26,9 @@
   article,
   img,
   button,
-  input {
+  input,
+  a,
+  i {
     @apply transition-all duration-300;
   }
 }
