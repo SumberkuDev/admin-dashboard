@@ -50,7 +50,9 @@ export default function Header() {
           </div>
           <ul className='w-full py-1 h-56 md:h-64 lg:h-80 overflow-y-scroll'>
             {dummyText.map((text, i) => (
-              <li className='w-full py-2 border px-2 md:px-4' key={i}>
+              <li
+                className='w-full py-2 border px-2 md:px-4 text-xs sm:text-sm lg:text-base'
+                key={i}>
                 {text}
               </li>
             ))}
@@ -64,7 +66,7 @@ export default function Header() {
 
         <div
           ref={profileMenu}
-          className='absolute top-12 sm:top-14 md:top-16 w-full lg:w-1/3 h-42 lg:h-48 transform scale-0 -translate-y-1/2 shadow-md rounded-md overflow-hidden bg-white'>
+          className='absolute top-12 sm:top-14 md:top-16 w-full sm:w-5/12 md:w-1/2 lg:w-1/3 h-42 lg:h-48 transform scale-0 -translate-y-1/2 shadow-md rounded-md overflow-hidden bg-white'>
           <nav className='w-full h-full flex flex-col items-stretch justify-between'>
             <a
               href='#'
