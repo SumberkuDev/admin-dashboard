@@ -14,7 +14,7 @@ export default function Sidebar() {
     <>
       <aside
         ref={aside}
-        className='group fixed left-0 top-0 w-10/12 xs:w-9/12 sm:w-2/5 lg:w-12 lg:hover:w-60 h-screen transform -translate-x-full lg:transform-none overflow-x-hidden bg-gray-900 z-50'>
+        className='group fixed left-0 top-0 w-9/12 xs:w-9/12 sm:w-2/5 lg:w-12 lg:hover:w-60 h-screen transform -translate-x-full lg:transform-none overflow-x-hidden bg-gray-900 z-50'>
         <nav className='relative flex flex-col justify-between w-full h-full'>
           <ul className='w-full flex flex-col items-stretch pt-12 max-h-96 overflow-y-hidden overflow-x-hidden'>
             {dummyMenu.map((menu, i) => (
@@ -25,7 +25,7 @@ export default function Sidebar() {
                   <span className='grid place-items-center w-10 h-10 md:w-12 md:h-12 absolute left-0'>
                     <i className={`bx ${menu.icon}`}></i>
                   </span>
-                  <span className='ml-12 md:ml-14 font-medium text-base'>
+                  <span className='ml-12 md:ml-14 font-medium'>
                     {menu.text}
                   </span>
                 </a>
