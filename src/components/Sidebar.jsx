@@ -21,7 +21,7 @@ export default function Sidebar() {
               <li key={i}>
                 <a
                   href='#'
-                  className='relative flex items-center w-full text-sm md:text-base h-12 whitespace-nowrap text-gray-200 hover:bg-gray-800'>
+                  className='relative flex items-center w-full text-xs sm:text-sm md:text-base h-12 whitespace-nowrap text-gray-200 hover:bg-gray-800'>
                   <span className='grid place-items-center w-10 h-10 md:w-12 md:h-12 absolute left-0'>
                     <i className={`bx ${menu.icon}`}></i>
                   </span>
