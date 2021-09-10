@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header
       ref={header}
-      className='flex items-center justify-between fixed top-0 w-full h-12 sm:h-14 md:h-16 px-2 sm:px-4 md:px-6 md:pl-14 lg:pr-4 bg-white z-40'>
+      className='flex items-center justify-between fixed top-0 w-full h-12 sm:h-14 md:h-16 px-2 sm:px-4 md:px-6 lg:pl-14 lg:pr-4 bg-white z-40'>
       <div className='relative hidden md:flex items-center h-8 sm:h-9 md:h-10 w-full md:w-4/5 lg:w-3/4 rounded-md focus-within:shadow-md bg-gray-100 focus-within:bg-white'>
         <div className='grid place-items-center w-12 h-full text-gray-500'>
           <i className='bx bx-search'></i>
