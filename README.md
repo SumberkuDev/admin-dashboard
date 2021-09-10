@@ -1,6 +1,5 @@
 ## Admin Dashboard - Rew Dashboard
 
-<<<<<<< HEAD
 Admin dashboard ini dibangun dengan ViteJS.
 ViteJS adalah sebuah Build Tools yang cepat, cari tahu apa itu ViteJS [disini](https://vitejs.dev/).
 
@@ -31,6 +30,3 @@ npm run build
 ```
 
 ketika sudah selesai, kamu akan mendapatkan folder baru yaitu build atau dist, folder itu merupakan aplikasi yang sama, hanya saja folder tersebut optimal untuk _production_
-=======
-Admin dashboard ini dibangun dengan ViteJS, ViteJS adalah sebuah Build Tools yang cepat, cari tahu apa itu ViteJS [disini](https://vitejs.dev/)
->>>>>>> fc7a2dcd1eee63852e308bd7234bd659d48484be
