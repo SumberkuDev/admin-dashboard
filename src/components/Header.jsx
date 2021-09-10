@@ -84,13 +84,13 @@ export default function Header() {
             <a
               href='#'
               className='w-full h-full flex items-center space-x-2 px-2 md:px-4 py-2 hover:bg-gray-100'>
-              <i class='bx bx-support'></i>
+              <i className='bx bx-support'></i>
               <span>help</span>
             </a>
             <a
               href='#'
               className='w-full h-full flex items-center space-x-2 px-2 md:px-4 py-2 hover:bg-gray-100'>
-              <i class='bx bx-log-out-circle'></i>
+              <i className='bx bx-log-out-circle'></i>
               <span>logout</span>
             </a>
           </nav>
