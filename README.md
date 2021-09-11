@@ -30,3 +30,7 @@ npm run build
 ```
 
 ketika sudah selesai, kamu akan mendapatkan folder baru yaitu build atau dist, folder itu merupakan aplikasi yang sama, hanya saja folder tersebut optimal untuk _production_
+
+#### Update
+
+Saya sudah mendeploy aplikasi ini di platform [Vercel](https://vercel.com) agar temman-teman dapat melihat aplikasi nya, artinya, ketika ada update pada commit di repo ini, maka aplikasi yang sudah saya deploy akan terupdate juga, silahkan lihat preview [disini](https://pv-rew-admin-dashboard.vercel.app/)
