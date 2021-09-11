@@ -6,7 +6,7 @@ export default function Card({ title, num, desc }) {
       <h3>{title}</h3>
       <span>{num}</span>
       <p>{desc}</p>
-      <button className='text-center py-1 lg:px-10 rounded-md text-white bg-indigo-500'>
+      <button className='text-center py-1 px-6 lg:px-10 rounded-md text-white bg-indigo-500'>
         CTA
       </button>
     </div>

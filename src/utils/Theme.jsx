@@ -3,7 +3,6 @@ import React, { createContext, useEffect, useRef } from 'react'
 export const Theme = createContext()
 
 export default function ThemeProvider(props) {
-  let hamburger = useRef()
   let navbar = useRef()
   let aside = useRef()
   let bellBtn = useRef()
@@ -24,13 +23,9 @@ export default function ThemeProvider(props) {
       controlHead()
       aside.current.classList.toggle('-translate-x-full')
       aside.current.classList.toggle('translate-x-0')
-      hamburger.current.classList.toggle('bx-menu')
-      hamburger.current.classList.toggle('bx-x')
     } else {
       aside.current.classList.toggle('-translate-x-full')
       aside.current.classList.toggle('translate-x-0')
-      hamburger.current.classList.toggle('bx-menu')
-      hamburger.current.classList.toggle('bx-x')
     }
   }
 
@@ -234,7 +229,6 @@ export default function ThemeProvider(props) {
     <Theme.Provider
       value={{
         dummyText,
-        hamburger,
         navbar,
         aside,
         bellBtn,
