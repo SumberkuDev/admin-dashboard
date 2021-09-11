@@ -20,7 +20,19 @@ export default function Header() {
       className='flex items-center justify-between fixed top-0 w-full h-12 sm:h-14 md:h-16 px-2 sm:px-4 md:px-6 lg:pl-16 lg:pr-4 bg-white z-40'>
       <div className='relative hidden md:flex items-center h-8 sm:h-9 md:h-10 w-full md:w-4/5 lg:w-3/4 rounded-md focus-within:shadow-md bg-gray-100 focus-within:bg-white'>
         <div className='grid place-items-center w-12 h-full text-gray-500'>
-          <i className='bx bx-search'></i>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            class='h-4 lg:h-5 w-4 lg:w-5'
+            fill='none'
+            viewBox='0 0 24 24'
+            stroke='currentColor'>
+            <path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
+            />
+          </svg>
         </div>
 
         <input
@@ -86,26 +98,80 @@ export default function Header() {
           <nav className='w-full h-full flex flex-col items-stretch justify-between'>
             <a
               href='#'
-              className='w-full h-full flex items-center space-x-2 px-2 md:px-4 py-2 text-xs sm:text-sm font-medium hover:bg-gray-100'>
-              <i className='bx bx-user'></i>
+              className='w-full h-full flex items-center space-x-2 px-2 md:px-4 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-100'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                className='h-4 lg:h-5 w-4 lg:w-5'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'>
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={2}
+                  d='M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+                />
+              </svg>
               <span>profile</span>
             </a>
             <a
               href='#'
-              className='w-full h-full flex items-center space-x-2 px-2 md:px-4 py-2 text-xs sm:text-sm font-medium hover:bg-gray-100'>
-              <i className='bx bx-cog'></i>
+              className='w-full h-full flex items-center space-x-2 px-2 md:px-4 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-100'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                class='h-4 lg:h-5 w-4 lg:w-5'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'>
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z'
+                />
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M15 12a3 3 0 11-6 0 3 3 0 016 0z'
+                />
+              </svg>
               <span>setting</span>
             </a>
             <a
               href='#'
-              className='w-full h-full flex items-center space-x-2 px-2 md:px-4 py-2 text-xs sm:text-sm font-medium hover:bg-gray-100'>
-              <i className='bx bx-support'></i>
+              className='w-full h-full flex items-center space-x-2 px-2 md:px-4 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-100'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                className='h-4 lg:h-5 w-4 lg:w-5'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'>
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={2}
+                  d='M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z'
+                />
+              </svg>
               <span>help</span>
             </a>
             <a
               href='#'
-              className='w-full h-full flex items-center space-x-2 px-2 md:px-4 py-2 text-xs sm:text-sm font-medium hover:bg-gray-100'>
-              <i className='bx bx-log-out-circle'></i>
+              className='w-full h-full flex items-center space-x-2 px-2 md:px-4 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-100'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                className='h-4 lg:h-5 w-4 lg:w-5'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'>
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={2}
+                  d='M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1'
+                />
+              </svg>
               <span>logout</span>
             </a>
           </nav>
