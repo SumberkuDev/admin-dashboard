@@ -10,6 +10,8 @@ export default function Header() {
     handleProfileMenu,
     dummyText,
     header,
+    bellBtn,
+    profileBtn,
   } = useContext(Theme)
 
   return (
@@ -35,8 +37,9 @@ export default function Header() {
       </div>
       <div className='relative flex items-center justify-end w-full h-full space-x-2'>
         <button
+          ref={bellBtn}
           onClick={handleNotifbar}
-          className='grid place-items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-md outline-none focus:ring-2 focus:ring-indigo-400 text-base md:text-lg lg:text-xl text-gray-700 hover:shadow-md'>
+          className='grid place-items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-md outline-none focus:ring-2 ring-indigo-400 text-base md:text-lg lg:text-xl text-gray-700 hover:shadow-md'>
           <i className='bx bx-bell'></i>
         </button>
 
@@ -51,7 +54,7 @@ export default function Header() {
           <ul className='w-full py-1 h-56 md:h-64 lg:h-80 overflow-y-scroll'>
             {dummyText.map((text, i) => (
               <li
-                className='w-full py-2 border px-2 md:px-4 text-xs sm:text-sm lg:text-base'
+                className='w-full py-1 sm:py-2 border px-2 md:px-4 text-xs sm:text-sm'
                 key={i}>
                 {text}
               </li>
@@ -59,8 +62,9 @@ export default function Header() {
           </ul>
         </div>
         <button
+          ref={profileBtn}
           onClick={handleProfileMenu}
-          className='grid place-items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-md outline-none focus:ring-2 focus:ring-indigo-400 hover:shadow-md bg-white'>
+          className='grid place-items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-md outline-none focus:ring-2 ring-indigo-400 hover:shadow-md bg-white'>
           <img className='w-6' src={image} alt='profileImage' />
         </button>
 

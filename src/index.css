@@ -27,7 +27,8 @@
   button,
   input,
   a,
-  i {
+  i,
+  main {
     @apply transition-all duration-300;
   }
 }

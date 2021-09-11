@@ -6,13 +6,15 @@ export default function ThemeProvider(props) {
   let hamburger = useRef()
   let navbar = useRef()
   let aside = useRef()
-  let bell = useRef()
+  let bellBtn = useRef()
+  let profileBtn = useRef()
   let asideBtn = useRef()
   let notifbar = useRef()
   let profileMenu = useRef()
   let asideExpander = useRef()
   let expandText = useRef()
   let header = useRef()
+  let mainLayout = useRef()
 
   function handleAside() {
     if (
@@ -40,7 +42,8 @@ export default function ThemeProvider(props) {
       asideExpander.current.classList.toggle('rotate-180')
       header.current.classList.toggle('lg:pl-64')
       header.current.classList.toggle('lg:pl-16')
-
+      mainLayout.current.classList.toggle('lg:pl-64')
+      mainLayout.current.classList.toggle('lg:pl-16')
       setTimeout(() => {
         aside.current.classList.toggle('lg:hover:w-60')
         checkExpandText()
@@ -51,6 +54,8 @@ export default function ThemeProvider(props) {
       asideExpander.current.classList.toggle('rotate-180')
       header.current.classList.toggle('lg:pl-64')
       header.current.classList.toggle('lg:pl-16')
+      mainLayout.current.classList.toggle('lg:pl-64')
+      mainLayout.current.classList.toggle('lg:pl-16')
       checkExpandText()
     }
   }
@@ -71,11 +76,13 @@ export default function ThemeProvider(props) {
       notifbar.current.classList.toggle('h-72')
       notifbar.current.classList.toggle('md:h-80')
       notifbar.current.classList.toggle('lg:h-96')
+      bellBtn.current.classList.toggle('ring-2')
     } else {
       notifbar.current.classList.toggle('h-0')
       notifbar.current.classList.toggle('h-72')
       notifbar.current.classList.toggle('md:h-80')
       notifbar.current.classList.toggle('lg:h-96')
+      bellBtn.current.classList.toggle('ring-2')
     }
   }
 
@@ -86,11 +93,13 @@ export default function ThemeProvider(props) {
       profileMenu.current.classList.toggle('scale-100')
       profileMenu.current.classList.toggle('-translate-y-1/2')
       profileMenu.current.classList.toggle('-translate-y-0')
+      profileBtn.current.classList.toggle('ring-2')
     } else {
       profileMenu.current.classList.toggle('scale-0')
       profileMenu.current.classList.toggle('scale-100')
       profileMenu.current.classList.toggle('-translate-y-1/2')
       profileMenu.current.classList.toggle('-translate-y-0')
+      profileBtn.current.classList.toggle('ring-2')
     }
   }
 
@@ -136,10 +145,6 @@ export default function ThemeProvider(props) {
       text: 'Statistic',
     },
     {
-      icon: 'bx-cog',
-      text: 'Setting',
-    },
-    {
       icon: 'bxs-file-pdf',
       text: 'Print Report',
     },
@@ -157,7 +162,8 @@ export default function ThemeProvider(props) {
         hamburger,
         navbar,
         aside,
-        bell,
+        bellBtn,
+        profileBtn,
         asideBtn,
         handleAside,
         notifbar,
@@ -169,6 +175,7 @@ export default function ThemeProvider(props) {
         handleAsideExpander,
         header,
         dummyMenu,
+        mainLayout,
       }}>
       {props.children}
     </Theme.Provider>
