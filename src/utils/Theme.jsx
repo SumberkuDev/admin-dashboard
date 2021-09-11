@@ -225,7 +225,7 @@ export default function ThemeProvider(props) {
         </svg>
       ),
       text: 'Information',
-      hyperLink: '/informatiion',
+      hyperLink: '/information',
     },
   ]
 
