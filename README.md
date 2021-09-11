@@ -33,4 +33,4 @@ ketika sudah selesai, kamu akan mendapatkan folder baru yaitu build atau dist, f
 
 #### Update
 
-Saya sudah mendeploy aplikasi ini di platform [Vercel](https://vercel.com) agar temman-teman dapat melihat aplikasi nya, artinya, ketika ada update pada commit di repo ini, maka aplikasi yang sudah saya deploy akan terupdate juga, silahkan lihat preview [disini](https://pv-rew-admin-dashboard.netlify.app)
+Saya sudah mendeploy aplikasi ini di platform [Netlify](https://app.netlify.com) agar temman-teman dapat melihat aplikasi nya, artinya, ketika ada update pada commit di repo ini, maka aplikasi yang sudah saya deploy akan terupdate juga, silahkan lihat preview [disini](https://pv-rew-admin-dashboard.netlify.app)
