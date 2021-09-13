@@ -7,10 +7,10 @@ export default function SidebarBtn() {
     <button
       onClick={handleAside}
       ref={asideHandler}
-      className='grid lg:hidden place-items-center fixed right-5 md:right-8 bottom-5 md:bottom-8 w-8 sm:w-10 h-8 sm:h-10 text-lg sm:text-xl rounded-xl text-white bg-gray-800'>
+      className='grid lg:hidden place-items-center fixed right-5 md:right-8 bottom-5 md:bottom-8 w-8 xs:w-10 h-8 xs:h-10 rounded-xl text-white bg-gray-800'>
       <svg
         xmlns='http://www.w3.org/2000/svg'
-        className='h-5 w-5'
+        className='h-5 w-5 xs:w-6 xs:h-6'
         viewBox='0 0 20 20'
         fill='currentColor'>
         <path

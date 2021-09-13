@@ -1,8 +1,11 @@
 import React, { useContext } from 'react'
 import image from '../img/profile.jpg'
 import { Theme } from '../utils/Theme'
+import Stylus from '../utils/Stylus'
+import styles from '../Styles/styles'
 
 export default function Header() {
+  console.log(styles)
   const {
     handleNotifbar,
     notifbar,
@@ -14,12 +17,21 @@ export default function Header() {
     profileBtn,
   } = useContext(Theme)
 
+  const {
+    flex: { flexItemsCenter, flextCol },
+    grid: { gridCenter },
+    etc: { shdwRnd, stateBtn },
+    spacing: { paddingX },
+    wh: { btnWH, fullWH },
+    utility: { searchbarInput },
+  } = Stylus
+
   return (
     <header
       ref={header}
-      className='flex items-center justify-between fixed top-0 w-full h-12 sm:h-14 md:h-16 px-2 sm:px-4 md:px-6 lg:pl-16 lg:pr-4 bg-white z-40'>
+      className={`${flexItemsCenter} ${paddingX} justify-between fixed top-0 w-full h-12 sm:h-14 md:h-16 lg:pl-16 lg:pr-4 bg-white z-40 shadow-lg`}>
       <div className='relative hidden md:flex items-center h-8 sm:h-9 md:h-10 w-full md:w-4/5 lg:w-3/4 rounded-md focus-within:shadow-md bg-gray-100 focus-within:bg-white'>
-        <div className='grid place-items-center w-12 h-full text-gray-500'>
+        <div className={`${gridCenter} w-12 h-full text-gray-500`}>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='h-4 lg:h-5 w-4 lg:w-5'
@@ -36,7 +48,7 @@ export default function Header() {
         </div>
 
         <input
-          className='peer w-full h-full flex items-center text-sm outline-none bg-transparent placeholder-transparent text-gray-700'
+          className={searchbarInput}
           type='text'
           id='searchbar'
           placeholder='search something...'
@@ -51,7 +63,7 @@ export default function Header() {
         <button
           ref={bellBtn}
           onClick={handleNotifbar}
-          className='grid place-items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-md outline-none focus:ring-2 ring-indigo-400 text-base md:text-lg lg:text-xl text-gray-700 hover:shadow-md'>
+          className={`relative ${gridCenter} ${btnWH} ${shdwRnd} ${stateBtn}`}>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='h-4 w-4 lg:w-5 lg:h-5'
@@ -65,6 +77,9 @@ export default function Header() {
               d='M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9'
             />
           </svg>
+          {dummyText.length ? (
+            <div className='absolute top-3 right-3 w-1.5 sm:w-2 h-1.5 sm:h-2 bg-red-500 rounded-full'></div>
+          ) : null}
         </button>
 
         <div
@@ -75,30 +90,37 @@ export default function Header() {
               Notifications
             </h5>
           </div>
-          <ul className='w-full py-1 h-56 md:h-64 lg:h-80 overflow-y-scroll'>
-            {dummyText.map((text, i) => (
-              <li
-                className='w-full py-1 sm:py-2 border px-2 md:px-4 text-xs sm:text-sm'
-                key={i}>
-                {text}
+          <ul className='relative w-full py-1 max-h-56 md:max-h-64 lg:max-h-80 overflow-y-scroll'>
+            {dummyText.length ? (
+              dummyText.map((text, i) => (
+                <li
+                  className='w-full py-1 sm:py-2 border px-2 md:px-4 text-xs sm:text-sm'
+                  key={i}>
+                  {text}
+                </li>
+              ))
+            ) : (
+              <li className='w-h-full grid place-items-center py-1 sm:py-2 px-2 md:px-4 text-xs sm:text-sm'>
+                You're All set!
               </li>
-            ))}
+            )}
           </ul>
         </div>
         <button
           ref={profileBtn}
           onClick={handleProfileMenu}
-          className='grid place-items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-md outline-none focus:ring-2 ring-indigo-400 hover:shadow-md bg-white'>
+          className={`${gridCenter} ${btnWH} ${shdwRnd} ${stateBtn}`}>
           <img className='w-6' src={image} alt='profileImage' />
         </button>
 
         <div
           ref={profileMenu}
           className='absolute top-12 sm:top-14 md:top-16 w-full sm:w-5/12 md:w-1/2 lg:w-1/3 h-42 lg:h-48 transform scale-0 -translate-y-1/2 shadow-md rounded-md overflow-hidden bg-white'>
-          <nav className='w-full h-full flex flex-col items-stretch justify-between'>
+          <nav
+            className={`${fullWH} ${flextCol} items-stretch justify-between`}>
             <a
               href='#'
-              className='w-full h-full flex items-center space-x-2 px-2 md:px-4 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-100'>
+              className={`${fullWH} ${flexItemsCenter} space-x-2 px-2 md:px-4 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-100`}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='h-4 lg:h-5 w-4 lg:w-5'
