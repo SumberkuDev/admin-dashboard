@@ -14,7 +14,6 @@
   button {
     @apply font-openSans;
   }
-  button,
   input {
     @apply outline-none;
   }
@@ -28,7 +27,14 @@
   button,
   input,
   a,
-  i {
+  i,
+  main {
     @apply transition-all duration-300;
+  }
+  .navLink {
+    @apply relative flex items-center w-full text-xs sm:text-sm md:text-base h-12 whitespace-nowrap text-gray-200 hover:bg-gray-800;
+  }
+  .navLink.active {
+    @apply text-indigo-400 bg-gray-800;
   }
 }
